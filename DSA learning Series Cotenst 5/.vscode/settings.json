@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "ostream": "cpp"
+    },
+    "search.searchEditor.reusePriorSearchConfiguration": true
+}
