@@ -1,32 +1,18 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
+#define MAX 100
 using namespace std;
-
-long long giveValidStep(long long m, long long x, long long a)
-{
-    long long div = (m - a) / x;
-
-    cout << m << x << a <<div;
-
-    return div * x + a;
-}
-
-long long calFib(long long num)
-{
-    if (num == 1)
-        return 0;
-    else
-    {
-        return num + calFib(num - 1);
-    }
-}
+int arr[MAX];
 
 int main()
 
 {
-    long long num  = log2l(9);
-    num = pow(2, num);
 
-    num = calFib(num);
-    cout << num;
+    for (int i = 0; i < 5; i++)
+    {
+        if (arr[i] == 0)
+        {
+            cout << "Yes";
+        }
+       
+    }
 }
