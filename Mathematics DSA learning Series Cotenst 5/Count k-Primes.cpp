@@ -7,14 +7,14 @@ int prime[MAX];
 int kPrime[MAX][6];
 
 void seive()
-{
-    for (int i = 2; i < MAX; i++)
+{  for (int i = 2; i < MAX; i++)
     {
         if (prime[i] == 0)
         {
             for (int j = i; j < MAX; j += i)
                 prime[j]++;
         }
+  
     }
 
     for (int i = 2; i < MAX; i++)
