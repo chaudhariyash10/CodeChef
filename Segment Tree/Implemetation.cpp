@@ -36,15 +36,40 @@ int query(vector<int> segTree, int index, int queryLeft, int queryRight, int sta
     return leftAns + rightAns;
 }
 
+void update(vector<int> segTree, int index, int val, int start, int end, int stIndex)
+{
+    if (index < start || index > end)
+    {
+        return;
+    }
+
+    if (start == end)
+    {
+        segTree[stIndex] = val;
+        return;
+    }
+
+    int mid = (start + end) / 2;
+
+    if (index > mid)
+    {
+        update(segTree, index, val, mid + 1, end, 2 * stIndex + 2);
+    }
+    else
+        update(segTree, index, val, start, mid, 2 * stIndex + 1);
+
+            
+}
+
 int main()
 {
-    vector<int> arr{1, 3, 5, 7, 9, 11};
+    vector<int> arr{1, 3, 5};
 
     vector<int> segTree(4 * arr.size());
     int length = arr.size();
     buildSegmentTree(arr, segTree, 0, arr.size() - 1, 0);
 
-    cout << query(segTree, 0, 1, 3, 0, length - 1) << endl;
+    cout << query(segTree, 0, 0, 2, 0, length - 1) << endl;
 
     for (int i = 0; i < 4 * length; i++)
         cout << segTree[i] << " ";
