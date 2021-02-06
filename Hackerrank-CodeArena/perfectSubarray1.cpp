@@ -33,12 +33,11 @@ int main()
                 if (umap[arr[j]] == 3)
                     while (arr[i] != arr[j])
                     {
-                        if(umap[arr[i]] > 0)
+                        if (umap[arr[i]] > 0)
                             umap[arr[i]]--;
                         i++;
                     }
                 i++;
-
             }
         }
     }
