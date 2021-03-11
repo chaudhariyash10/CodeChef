@@ -2,23 +2,26 @@
 #define mod 1000000007
 using namespace std;
 
+int nums[8001];
 int main()
 {
+    // for (int i = 0; i < 8001; i++)
+    //     count[i] = 0;
     int n, k;
     cin >> n >> k;
     int arr[n + 1];
+    set<int> s;
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
+        s.insert(arr[i]);
+        nums[arr[i]]++;
     }
 
-    sort(arr, arr + n);
+    int limit = min(k, 1007);
 
-    long goodSequences[n + 2];
-    goodSequences[0] = 1;
-    int distinctIndex = 0;
-    for (int i = 1; i < n + 2; i++)
+    for (int i = 0; i < limit; i++)
     {
-        ;
+        
     }
 }
