@@ -1,9 +1,7 @@
 {
-    "files.associations": {
-        "ostream": "cpp",
-        "cmath": "cpp",
-        "iostream": "cpp",
-        "*.tcc": "cpp"
-    },
-    "search.searchEditor.reusePriorSearchConfiguration": true
+  "files.associations": {
+    "ostream": "cpp",
+    "iostream": "cpp"
+  },
+  "search.searchEditor.reusePriorSearchConfiguration": true
 }
